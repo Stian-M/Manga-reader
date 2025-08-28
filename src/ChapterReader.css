@@ -1,0 +1,32 @@
+/* Add to Home.css or a new ChapterReader.css */
+.reader-container {
+  background: #181a1b;
+  min-height: 100vh;
+  color: #f3f3f3;
+  padding: 2rem 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reader-page {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #23272a;
+}
+.chapter-link:hover .chapter-number,
+.chapter-link:hover .chapter-title {
+  color: #00bcd4;
+}
