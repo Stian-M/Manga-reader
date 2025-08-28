@@ -9,6 +9,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/reader/:chapterId" element={<ChapterReader />} />
+      <Route path="*" element={<Home />} /> {/* Fallback for unknown routes */}
     </Routes>
   );
 }

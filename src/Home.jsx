@@ -152,19 +152,6 @@ export default function Home() {
       .then((data) => setUpdated(formatManga(data)));
   }, []);
 
-  useEffect(() => {
-    fetch("https://api.mangadex.org/manga?limit=1")
-      .then(res => res.json())
-      .then(data => {
-        console.log("Test fetch result:", data);
-        alert("Test fetch result: " + JSON.stringify(data));
-      })
-      .catch(err => {
-        console.log("Test fetch error:", err);
-        alert("Test fetch error: " + err);
-      });
-  }, []);
-
   function formatManga(data) {
     if (!data || !data.data) return [];
     return data.data.map((item) => {
