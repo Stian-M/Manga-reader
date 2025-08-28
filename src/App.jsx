@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import ChapterReader from './ChapterReader';
+import Browse from './Browse';
 
 export default function App() {
   return (
