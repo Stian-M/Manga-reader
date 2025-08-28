@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./ChapterReader.css";
 
-const API_BASE = "https://api.mangadex.org";
+const API_BASE = "https://your-vercel-app.vercel.app/api";
 
 export default function ChapterReader() {
     const { chapterId } = useParams();
