@@ -195,9 +195,7 @@ export default function Home() {
           </button>
         </form>
         <nav>
-          <a href="#latest">Latest</a>
-          <a href="#popular">Popular</a>
-          <a href="#updated">Recently Updated</a>
+          <Link to="/browse">Browse</Link>
         </nav>
       </header>
       <main>

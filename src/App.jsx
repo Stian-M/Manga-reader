@@ -8,6 +8,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/browse" element={<Browse />} />
       <Route path="/reader/:chapterId" element={<ChapterReader />} />
       <Route path="*" element={<Home />} /> {/* Fallback for unknown routes */}
     </Routes>
