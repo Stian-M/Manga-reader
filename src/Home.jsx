@@ -158,7 +158,7 @@ export default function Home() {
       const title = item.attributes.title.en || Object.values(item.attributes.title)[0];
       const coverRel = item.relationships.find((r) => r.type === "cover_art");
       const cover = coverRel
-        ? `https://uploads.mangadex.org/covers/${item.id}/${coverRel.attributes.fileName}.256.jpg`
+        ? `${API_BASE}/cover/${item.id}/${coverRel.attributes.fileName}`
         : "https://via.placeholder.com/256x350?text=No+Cover";
       return {
         id: item.id,
