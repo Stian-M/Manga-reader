@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { MangaDetailsModal } from "./Home.jsx"; // Import the modal from Home.jsx
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const API_BASE = "https://manga-reader-swart.vercel.app/api";
@@ -10,7 +9,8 @@ export default function Browse() {
   const [mangas, setMangas] = useState([]);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
-  const [selectedManga, setSelectedManga] = useState(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(
@@ -47,7 +47,7 @@ export default function Browse() {
           <div
             className="manga-card"
             key={manga.id}
-            onClick={() => setSelectedManga(manga)}
+            onClick={() => navigate(`/manga/${manga.id}`)}
             style={{ cursor: "pointer" }}
           >
             <img src={manga.cover} alt={manga.title} className="manga-cover" />
@@ -67,12 +67,6 @@ export default function Browse() {
           Next
         </button>
       </div>
-      {selectedManga && (
-        <MangaDetailsModal
-          manga={selectedManga}
-          onClose={() => setSelectedManga(null)}
-        />
-      )}
     </div>
   );
 }
