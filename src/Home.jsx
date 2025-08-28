@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const API_BASE = "https://your-vercel-app.vercel.app/api";
+const API_BASE = "https://manga-reader-swart.vercel.app/api";
 
 function MangaSection({ id, title, mangas, onSelect }) {
   return (
